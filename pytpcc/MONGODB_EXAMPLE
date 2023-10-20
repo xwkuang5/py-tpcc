@@ -5,9 +5,12 @@
 uri                  = mongodb://localhost:27017
 causal_consistency   = True
 findandmodify        = True
-name                 = tpcc
+name                 = tpcc-1
 secondary_reads      = True
 denormalize          = True
 retry_writes         = True
+warehouses           = 1
+clients              = 1
+scalefactor          = 1
 # user                 = username
 # passwd               = passwd

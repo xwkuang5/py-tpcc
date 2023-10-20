@@ -41,14 +41,14 @@ from pprint import pprint, pformat
 from util import results, scaleparameters
 from runtime import executor, loader
 
-logging.basicConfig(level=logging.INFO,
+logging.basicConfig(stream=sys.stdout, level=logging.DEBUG,
                     format="%(asctime)s [%(funcName)s:%(lineno)03d] %(levelname)-5s: %(message)s",
                     datefmt="%m-%d-%Y %H:%M:%S",
                     #
                     filename='results.log')
 
 console = logging.StreamHandler()
-console.setLevel(logging.INFO)
+console.setLevel(logging.DEBUG)
 console.setFormatter(logging.Formatter(
     '%(asctime)s [%(funcName)s:%(lineno)03d] %(levelname)-5s: %(message)s'))
 logging.getLogger('').addHandler(console)
